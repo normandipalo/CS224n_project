@@ -12,11 +12,11 @@ from datetime import datetime # to get the current date and time
 
 # add the "PythonAPI" dir to the path so that "pycocotools" can be found:
 import sys
-sys.path.append("/home/fregu856/CS224n/project/CS224n_project/coco/PythonAPI")
+sys.path.append("coco/PythonAPI")
 from pycocotools.coco import COCO
 
 # add the "coco-caption" dir to the path so that "pycocoevalcap" can be found:
-sys.path.append("/home/fregu856/CS224n/project/CS224n_project/coco/coco-caption")
+sys.path.append("coco/coco-caption")
 from pycocoevalcap.eval import COCOEvalCap
 
 import json
@@ -389,7 +389,7 @@ def get_max_caption_length(batch_size):
     """
 
     caption_length_2_no_of_captions =\
-            cPickle.load(open("/home/fregu856/CS224n/project/CS224n_project/coco/data/train_caption_length_2_no_of_captions"))
+            cPickle.load(open("coco/data/train_caption_length_2_no_of_captions"))
 
     # among the caption lengths that at least batch_size captions have, get the max:
     max_caption_length = 0
